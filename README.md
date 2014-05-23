@@ -96,6 +96,8 @@ Supported arguments are below.
 * sauceUser `string`: Username for a SauceLabs account
 * sauceKey `string`: Access Key for a SauceLabs account
 * capabilities `object`: Capabilities object to be passed to the test, e.g. browserName, platform and version
+* multiCapabilities `object`: multiCapabilities object to be passed to the test.  Protractor will run tests in parallel against each set of capabilities.
+* splitTestsBetweenCapabilities `boolean`: If true, will split different test files over different instances of a browser resulting in a faster test throughput
 * framework `string`: Limited support for using mocha as the test framework instead of jasmine.
 * cucumberOpts `object`: Cucumber framework options object to be passed to the test, e.g. require, tags and format
 

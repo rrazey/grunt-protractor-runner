@@ -41,8 +41,8 @@ module.exports = function(grunt) {
     var keepAlive = opts['keepAlive'];
     var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "sauceUser", "sauceKey", "framework"];
     var listArgs = ["specs"];
-    var boolArgs = ["includeStackTrace", "verbose"];
-    var objectArgs = ["params", "capabilities", "cucumberOpts"];
+    var boolArgs = ["includeStackTrace", "verbose", "splitTestsBetweenCapabilities"];
+    var objectArgs = ["params", "capabilities", "cucumberOpts", "multiCapabilities"];
 
     var args = [protractorBinPath, opts.configFile];
     if (opts.noColor){
