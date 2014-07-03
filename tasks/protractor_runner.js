@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var opts = this.options({
       configFile: protractorRefConfPath,
-      keepAlive: true,
+      keepAlive: false,
       noColor: false,
       debug: false,
       args: {}
@@ -39,10 +39,10 @@ module.exports = function(grunt) {
     grunt.verbose.writeln("Options: " + util.inspect(opts));
 
     var keepAlive = opts['keepAlive'];
-    var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "sauceUser", "sauceKey", "framework"];
-    var listArgs = ["specs"];
-    var boolArgs = ["includeStackTrace", "verbose", "splitTestsBetweenCapabilities"];
-    var objectArgs = ["params", "capabilities", "cucumberOpts", "multiCapabilities"];
+    var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "sauceUser", "sauceKey", "framework", "suite"];
+    var listArgs = ["specs", "exclude"];
+    var boolArgs = ["includeStackTrace", "verbose"];
+    var objectArgs = ["params", "capabilities", "cucumberOpts", "mochaOpts"];
 
     var args = [protractorBinPath, opts.configFile];
     if (opts.noColor){

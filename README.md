@@ -56,7 +56,7 @@ A protractor config file.
 
 #### options.keepAlive
 Type: `Boolean`
-Default value: `true`
+Default value: `false` (`true` before v1.0.0)
 
 If true, grunt process continues even if the test fails. This option is useful when using with grunt watch.
 If false, grunt process stops when the test fails.
@@ -87,6 +87,8 @@ Supported arguments are below.
 * baseUrl `string`: URL to prepend to all relative paths
 * rootElement `string`: Element housing ng-app, if not html or body
 * specs `array`: Array of spec files to test. Ex. `["spec1.js","spec2.js"]`
+* exclude `array`: Array of files to exclude from testing. Ex. `["spec2.js"]`
+* suite `string`: Name of test suite to run
 * includeStackTrace `boolean`: Print stack trace on error
 * verbose `boolean`: Print full spec names
 * browser `string`: Browser name, e.g. chrome or firefox
@@ -100,6 +102,7 @@ Supported arguments are below.
 * splitTestsBetweenCapabilities `boolean`: If true, will split different test files over different instances of a browser resulting in a faster test throughput
 * framework `string`: Limited support for using mocha as the test framework instead of jasmine.
 * cucumberOpts `object`: Cucumber framework options object to be passed to the test, e.g. require, tags and format
+* mochaOpts `object`: Mocha test framework options object to be passed
 
 ## Tests
 
@@ -129,6 +132,11 @@ In case you want to use the plugin with the global installed protractor command.
 
 ## Release History
 
+* 1.0.0
+  * Change default value of `options.keepAlive` to false (#50)
+
+* 0.2.5
+  * Support --mochaOpts, --suite and --exclude in options.args (#52, #53, #57)
 * 0.2.4
   * Support --cucumberOpts in options.args (#46)
 * 0.2.3
