@@ -28,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "protractor": "git+https://github.com/rrazey/protractor.git#e804ce89295b97c0c4533645c720fa43004bea15"
+    "protractor": "git+https://github.com/rrazey/protractor.git#7689f40e066b2b39eea1de0c9a3ac791f41df1e7"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",
